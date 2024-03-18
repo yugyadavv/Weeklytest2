@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Viewer</title>
+  <style>
+    body, html {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Prevent scrollbars */
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .container {
+      display: flex;
+      height: 90%;
+      width: 80%;
+      margin-top: 20px;
+    }
+    .image-container {
+      width: 600px; /* Set fixed width */
+      overflow-y: auto; /* Allow vertical scrolling */
+      border: 2px solid black; /* Add black border */
+    }
+    .image-container img {
+      display: block;
+      margin: 10px auto;
+      cursor: pointer;
+      width: 600px;
+    }
+    
+    .large-view {
+      flex: 1;
+      display: flex;
+      margin-left: 5px;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% - 600px); /* Adjust width to fill remaining space */
+      border: 2px solid black; /* Add black border */
+      overflow: auto; /* Allow scrolling for iframe */
+    }
+    .large-view iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <p>Project 1-Resume</p>
+        <hr>
+      <a href="https://yugyadavv.github.io/Resume/" target="large_view">
+        <img src="img/resume.png" alt="For Resume Demo">
+        <hr>
+    </a>
+      <p>Project 2-Photo cat App</p>
+      <hr>
+      <a href="https://yugyadavv.github.io/The-Cat-Photo-App/" target="large_view">
+        <img src="img/cat.png" alt="Cat Photo App">  
+        <hr>
+      </a>
+      <p>Project 3-Form</p>
+      <hr>
+      <a href="https://yugyadavv.github.io/Form/" target="large_view">
+        <img src="img/Form.png" alt="Basic Form">
+        <hr>
+      </a>
+      <p>Project 4-Tribute</p>
+      <hr>
+      <a href="https://yugyadavv.github.io/Tribute-Page/" target="large_view">
+        <img src="img/tribute.png" alt="Tribute Page">
+        <hr>
+      </a>
+    </div>
+
+    <div class="large-view">
+      <iframe name="large_view" src="https://yugyadavv.github.io/Resume/" frameborder="0"></iframe>
+    </div>
+  </div>
+
+</body>
+</html>
